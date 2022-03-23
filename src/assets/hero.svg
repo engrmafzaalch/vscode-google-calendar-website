@@ -1,0 +1,61 @@
+
+  <svg
+    width="1000"
+    height="1000"
+    viewBox="0 0 1000 1000"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">
+    <feFlood flood-color="#ffffff" result="neutral-gray" />
+  
+    <feTurbulence
+      in="neutral-gray"
+      type="fractalNoise"
+      baseFrequency="2.5"
+      numOctaves="100"
+      stitchTiles="stitch"
+      result="noise"
+    />
+  
+    <feColorMatrix
+      in="noise"
+      type="saturate"
+      values="0"
+      result="destaturatedNoise"
+    ></feColorMatrix>
+  
+    <feComponentTransfer in="desaturatedNoise" result="theNoise">
+      <feFuncA type="table" tableValues="0 0 0.1 0"></feFuncA>
+    </feComponentTransfer>
+  
+    <feBlend
+      in="SourceGraphic"
+      in2="theNoise"
+      mode="soft-light"
+      result="noisy-image"
+    />
+  </filter>
+      
+      <linearGradient id="linearGradientId" gradientTransform="rotate(0 0.5 0.5)">
+      <stop offset="0%"  stop-color="#006bff" />
+			<stop offset="100%"  stop-color="#195cbb" />
+    </linearGradient>
+      
+      
+      
+      
+      <clipPath id="shape">
+        <path fill="currentColor" d="M894,666Q832,832,666,881.5Q500,931,356,859.5Q212,788,198,644Q184,500,177.5,335.5Q171,171,335.5,146.5Q500,122,623.5,187.5Q747,253,851.5,376.5Q956,500,894,666Z"></path>
+      </clipPath>
+    </defs>
+  
+    
+
+    <g filter="url(#grain)" clip-path="url(#shape)">
+      <path fill="url(#linearGradientId)" d="M894,666Q832,832,666,881.5Q500,931,356,859.5Q212,788,198,644Q184,500,177.5,335.5Q171,171,335.5,146.5Q500,122,623.5,187.5Q747,253,851.5,376.5Q956,500,894,666Z" />
+    </g>
+
+    
+  
+  </svg>

@@ -1,32 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Navbar />
+    <router-view />
   </div>
 </template>
-
+<script>
+import Navbar from "@/components/Navbar";
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: "Pacaembu";
+  src: url("./assets/PacaembuVar-subset.woff2") format("woff2");
+  unicode-range: U+5, U+20, U+21, U+24, U+25, U+27, U+2B-2E, U+30-3A, U+3F,
+    U+41-5A, U+61-7A, U+D7, U+2019;
+  font-weight: 100 1000;
+  font-display: swap;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.btn-start {
+  font-family: "Pacaembu", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  height: 48px;
+  width: 160px;
+  border-radius: 24px;
+  background-color: #006bff;
+  border: 1px solid #006bff;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    box-shadow: 0px 4px 10px 0 #aaa6a6;
   }
 }
 </style>
