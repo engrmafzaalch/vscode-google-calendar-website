@@ -11,7 +11,12 @@
         and efficiently, eliminating the hassle of back-and-forth emails so you
         can get back to work.
       </p>
-      <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=RigRex.google-calendar-inegration" class="btn-start">Install Now</a>
+      <a
+        target="_blank"
+        href="https://marketplace.visualstudio.com/items?itemName=RigRex.google-calendar-inegration"
+        class="btn-start"
+        >Install Now</a
+      >
     </div>
     <div class="right">
       <img src="@/assets/hero.svg" class="doodle" alt="" />
@@ -28,7 +33,7 @@ export default {};
 .hero {
   padding: 0 6vw;
   min-height: 100vh;
-  font-family: "Pacaembu", sans-serif;
+  font-family: 'Pacaembu', sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
   .left {
