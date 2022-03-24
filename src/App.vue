@@ -2,17 +2,29 @@
   <div id="app">
     <Navbar />
     <router-view />
+    <Footer />
+
   </div>
 </template>
 <script>
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
 export default {
   components: {
     Navbar,
+    Footer,
+
   },
 };
 </script>
 <style lang="scss">
+*{
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'Pacaembu';
   src: url('./assets/PacaembuVar-subset.woff2') format('woff2');
@@ -37,13 +49,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+    margin-top: 30px;
   &:hover {
     box-shadow: 0px 4px 10px 0 #aaa6a6;
   }
-
   @media only screen and (max-width: 768px) {
     margin-bottom: 30px;
-    margin-top: -10px;
+    margin-top: 30px;
   }
 
   @media only screen and (max-width: 480px) {

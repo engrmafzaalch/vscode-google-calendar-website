@@ -1,17 +1,32 @@
 <template>
   <div class="hero">
     <div class="left">
-      <h1>
+      <h1
+        data-aos="fade-right"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="linear"
+        
+      >
         Reminders <br />
         on
         <span>VS Code</span>
       </h1>
-      <p>
+      <p
+        data-aos="fade-right"
+        data-aos-delay="300"
+        data-aos-duration="500"
+        data-aos-easing="linear"
+      >
         VSCode Google Calendar Extension is your hub for get meetings reminders
         and efficiently, eliminating the hassle of back-and-forth emails so you
         can get back to work.
       </p>
       <a
+       data-aos="fade-right"
+        data-aos-delay="550"
+        data-aos-duration="500"
+        data-aos-easing="linear"
         target="_blank"
         href="https://marketplace.visualstudio.com/items?itemName=RigRex.google-calendar-inegration"
         class="btn-start"
@@ -20,7 +35,15 @@
     </div>
     <div class="right">
       <img src="@/assets/hero.svg" class="doodle" alt="" />
-      <img src="@/assets/macbook.svg" class="laptop" alt="" />
+      <img
+        src="@/assets/macbook.png"
+        data-aos="fade-left"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="linear"
+        class="laptop"
+        alt=""
+      />
     </div>
   </div>
 </template>
@@ -32,15 +55,18 @@ export default {};
 <style lang="scss" scoped>
 .hero {
   padding: 12vw 6vw 9vw 6vw;
-  font-family: 'Pacaembu', sans-serif;
+  font-family: "Pacaembu", sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
 
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column-reverse;
     padding: 12vw 0 0 0;
     text-align: center;
+    justify-content: center;
+    row-gap: 100px;
   }
 
   @media only screen and (max-width: 480px) {
@@ -55,8 +81,8 @@ export default {};
 
     @media only screen and (max-width: 768px) {
       place-items: center;
-      padding-top: 15vw;
-      margin-top: -30px;
+      // padding-top: 15vw;
+      // margin-top: -30px;
     }
 
     @media only screen and (max-width: 480px) {
@@ -68,6 +94,7 @@ export default {};
     font-size: 70px;
     font-weight: 900;
     line-height: 1;
+    margin-bottom: 30px;
 
     @media only screen and (max-width: 1200px) {
       font-size: 50px;
@@ -76,26 +103,21 @@ export default {};
 
     @media only screen and (max-width: 991px) {
       font-size: 40px;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
     }
 
     @media only screen and (max-width: 768px) {
       font-size: 60px;
-      margin-top: -30px;
-    }
-
-    @media only screen and (max-width: 480px) {
-      font-size: 48px;
-      margin-bottom: 20px;
+      // margin-top: -30px;
     }
 
     @media only screen and (max-width: 480px) {
       font-size: 34px;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
     }
 
     span {
-      color: rgb(0, 107, 255);
+      color: #006bff;
     }
   }
   p {
@@ -127,6 +149,7 @@ export default {};
 
       @media only screen and (max-width: 480px) {
         width: 100%;
+        min-height: 200px;
       }
     }
     .laptop {

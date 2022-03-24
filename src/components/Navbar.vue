@@ -38,6 +38,9 @@ export default {};
   ul {
     margin-right: 6vw;
     list-style-type: none;
+    height: 60px;
+    display: flex;
+    align-items: center;
 
     @media only screen and (max-width: 600px) {
       display: none;

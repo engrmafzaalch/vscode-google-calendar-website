@@ -1,9 +1,23 @@
 <template>
   <div class="container">
     <div class="container_grid">
-      <h2 class="heading heading--2">We make it easy to get started</h2>
+      <h2
+        class="heading heading--2"
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="linear"
+      >
+        Easy to start
+      </h2>
       <div class="cards">
-        <div class="card">
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-delay="50"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+        >
           <div class="card_check">
             <svg
               width="32"
@@ -28,7 +42,13 @@
             work for you.
           </p>
         </div>
-        <div class="card">
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+        >
           <div class="card_check">
             <svg
               width="32"
@@ -52,7 +72,13 @@
             Send guests your Calendly link or embed it on your website.
           </p>
         </div>
-        <div class="card">
+        <div
+          class="card"
+          data-aos="fade-up"
+          data-aos-delay="1000"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+        >
           <div class="card_check">
             <svg
               width="32"
@@ -88,10 +114,26 @@ export default {};
 <style lang="scss" scoped>
 .container {
   background: #f8f8f8;
-  font-family: 'Pacaembu', sans-serif;
-
+  font-family: "Pacaembu", sans-serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 600px;
+    transform: translate(-35%, -35%);
+    background-size: contain;
+    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M737.5%2C693.5Q626%2C887%2C398.5%2C813Q171%2C739%2C139%2C476.5Q107%2C214%2C351.5%2C210Q596%2C206%2C722.5%2C353Q849%2C500%2C737.5%2C693.5Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22none%22 stroke=%22%23006bff%22 stroke-width=%2223%22 d=%22M737.5%2C693.5Q626%2C887%2C398.5%2C813Q171%2C739%2C139%2C476.5Q107%2C214%2C351.5%2C210Q596%2C206%2C722.5%2C353Q849%2C500%2C737.5%2C693.5Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+    z-index: -1;
+  }
   &_grid {
-    padding: 10vh 6vw;
+    padding: 40px 6vw;
     display: grid;
     align-items: center;
 
@@ -106,11 +148,11 @@ export default {};
     .heading--2 {
       text-align: center;
       font-size: 48px;
-      color: #0b3558;
-      font-weight: 500;
+      color: #000;
+      font-weight: 700;
 
       @media only screen and (max-width: 480px) {
-        font-size: 22px;
+        font-size: 28px;
       }
     }
 
@@ -118,7 +160,7 @@ export default {};
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      padding: 6vw;
+      padding: 40px 6vw 0 6vw;
 
       @media only screen and (max-width: 965px) {
         grid-template-columns: 1fr;
@@ -126,7 +168,7 @@ export default {};
 
       .card {
         background: #fff;
-        padding: 4vw 2.5vw 2vw 2.5vw;
+        padding: 2.5vw 2.5vw 2vw 2.5vw;
         border-radius: 5px;
         border: 1px solid #e7edf6;
 

@@ -205,7 +205,7 @@ export default {};
 
 <style lang="scss" scoped>
 .privacy {
-  padding: 40px 6vw;
+  padding: 80px 6vw;
   font-family: "Pacaembu", sans-serif;
 }
 </style>
