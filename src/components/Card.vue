@@ -95,6 +95,10 @@ export default {};
     display: grid;
     align-items: center;
 
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
+
     @media only screen and (max-width: 480px) {
       padding: 5vh 6vw;
     }

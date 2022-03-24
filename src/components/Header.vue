@@ -31,23 +31,69 @@ export default {};
 
 <style lang="scss" scoped>
 .hero {
-  padding: 0 6vw;
-  min-height: 100vh;
+  padding: 12vw 6vw 9vw 6vw;
   font-family: 'Pacaembu', sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 12vw 0 0 0;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 20vw 6vw;
+  }
+
   .left {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    min-height: 100vh;
+
+    @media only screen and (max-width: 768px) {
+      place-items: center;
+      padding-top: 15vw;
+      margin-top: -30px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      height: 30vh;
+      margin-top: 40px;
+    }
   }
   h1 {
     font-size: 70px;
-    // text-align: center;
     font-weight: 900;
     line-height: 1;
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 60px;
+      margin-top: -30px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+
     span {
       color: rgb(0, 107, 255);
     }
@@ -55,15 +101,18 @@ export default {};
   p {
     font-size: 20px;
     max-width: 508px;
-    // text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      font-weight: 300;
+    }
   }
   .right {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     z-index: 2;
+
     .doodle {
       position: absolute;
       top: 50%;
@@ -71,9 +120,25 @@ export default {};
       transform: translate(-50%, -50%);
       width: 100%;
       z-index: -1;
+
+      @media only screen and (max-width: 768px) {
+        width: 50%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        width: 100%;
+      }
     }
     .laptop {
       width: 100%;
+
+      @media only screen and (max-width: 768px) {
+        width: 50%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        width: 100%;
+      }
     }
   }
 }
