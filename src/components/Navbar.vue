@@ -38,11 +38,15 @@ export default {};
   ul {
     margin-right: 6vw;
     list-style-type: none;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
     li {
       display: inline-block;
     }
     a {
-      font-family: "Pacaembu", sans-serif;
+      font-family: 'Pacaembu', sans-serif;
       color: #000;
       text-decoration: none;
       cursor: pointer;
